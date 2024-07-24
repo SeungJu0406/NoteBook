@@ -25,6 +25,10 @@
         }
         public class Dungeon : IEnterable
         {
+            public Dungeon()
+            {
+            }
+
             public void Enter()
             {
                 Console.WriteLine("던전에 입장합니다");
@@ -57,6 +61,17 @@
             public void Open(IOpenable openable)
             {
                 openable.Open();
+            }
+        }
+        public interface IMove()
+        {
+            void Move();
+        }
+        public class Monster : IMove
+        {
+            public void Move()
+            {
+                throw new NotImplementedException();
             }
         }
     }
