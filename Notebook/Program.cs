@@ -1,39 +1,63 @@
-﻿using System.Data.SqlTypes;
-
-namespace Notebook
+﻿namespace Notebook
 {
     public class Program
     {
         static void Main(string[] args)
         {
-            Util.Monster orc1 = new Util.Monster("오크");
-            Util.Monster orc2 = new Util.Monster("오크");
-            if (Util.SameMonster(orc1, orc2)) 
-            {
-                Console.WriteLine("같은 몬스터입니다");
-            }
-            else
-            {
-                Console.WriteLine("다른 몬스터입니다");
-            }
+            Player player = new Player();
+            Dungeon dungeon = new Dungeon();
+            Chest chest = new Chest();
+            Door door = new Door();
+
+            player.Open(door);
+            player.Open(chest);
+            player.Enter(door);
+            player.Enter(dungeon);
         }
 
-
-    }
-    public static class Util
-    {
-        public class Monster
+        public interface IEnterable
         {
-            public string name;
-            public Monster(string name)
+            public void Enter();
+        }
+        public interface IOpenable
+        {
+            public void Open();
+        }
+        public class Dungeon : IEnterable
+        {
+            public void Enter()
             {
-                this.name = name;
+                Console.WriteLine("던전에 입장합니다");
             }
         }
-        public static bool SameMonster<T>(T left, T right) where T : Monster
+        public class Chest : IOpenable
         {
-            return left.name == right.name;
+            public void Open()
+            {
+                Console.WriteLine("상자를 엽니다");
+            }
         }
-
+        public class Door : IOpenable, IEnterable
+        {
+            public void Open()
+            {
+                Console.WriteLine("문을 엽니다");
+            }
+            public void Enter()
+            {
+                Console.WriteLine("문으로 들어갑니다");
+            }
+        }
+        public class Player
+        {
+            public void Enter(IEnterable enterable)
+            {
+                enterable.Enter();
+            }
+            public void Open(IOpenable openable)
+            {
+                openable.Open();
+            }
+        }
     }
 }
