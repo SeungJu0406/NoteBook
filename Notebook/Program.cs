@@ -2,77 +2,42 @@
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
-            Player player = new Player();
-            Dungeon dungeon = new Dungeon();
-            Chest chest = new Chest();
-            Door door = new Door();
+            int a = 10; // 정수형에 정수를 저장하듯
+            int b = 2;
+            // 델리게이트 자료형에 함수를 저장
+            Func<float, float, float> dele1 = Plus;
+            Console.WriteLine(dele1(a,b));
+            //Action<string>
+        }
+        public delegate float FloatDel(float left, float right);
+        public delegate void StrDel(string str);
+        public static float Plus(float left, float right)
+        {
+            return left + right;
+        }
+        public static void Message(string text)
+        {
+            Console.WriteLine(text);
+        }
+        public static void GenericDel() 
+        {
+            Func<float, double/*여기까진 매개변수*/, int/*마지막이 반환형*/> func1 = Function;
 
-            player.Open(door);
-            player.Open(chest);
-            player.Enter(door);
-            player.Enter(dungeon);
+            Action<int, float> action1 = Action; // 반환형이 없는경우는 Action 사용
         }
+        public static int Function(float a, double b) { return 0; }
+        public static void Action(int a, float b) { }
 
-        public interface IEnterable
-        {
-            public void Enter();
-        }
-        public interface IOpenable
-        {
-            public void Open();
-        }
-        public class Dungeon : IEnterable
-        {
-            public Dungeon()
-            {
-            }
 
-            public void Enter()
-            {
-                Console.WriteLine("던전에 입장합니다");
-            }
-        }
-        public class Chest : IOpenable
-        {
-            public void Open()
-            {
-                Console.WriteLine("상자를 엽니다");
-            }
-        }
-        public class Door : IOpenable, IEnterable
-        {
-            public void Open()
-            {
-                Console.WriteLine("문을 엽니다");
-            }
-            public void Enter()
-            {
-                Console.WriteLine("문으로 들어갑니다");
-            }
-        }
-        public class Player
-        {
-            public void Enter(IEnterable enterable)
-            {
-                enterable.Enter();
-            }
-            public void Open(IOpenable openable)
-            {
-                openable.Open();
-            }
-        }
-        public interface IMove()
-        {
-            void Move();
-        }
-        public class Monster : IMove
-        {
-            public void Move()
-            {
-                throw new NotImplementedException();
-            }
-        }
+
+
+
+
+
+
+
     }
 }
+
