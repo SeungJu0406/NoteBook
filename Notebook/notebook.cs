@@ -2,7 +2,7 @@
 {
     public class Program
     {
-        public static void Main()
+        public static void Main111()
         {
             Mydel1 delegate1 = Add;
             Console.WriteLine(delegate1(1,2));
