@@ -10,6 +10,11 @@ namespace Notebook
             Restaurant restaurant = new Restaurant();
             customer.Request(restaurant);
             restaurant.Enter();
+            restaurant.Enter();
+            restaurant.Enter();
+            restaurant.Enter();
+            restaurant.Enter();
+            restaurant.Enter();
         }
        
     }
@@ -27,7 +32,7 @@ namespace Notebook
     public class Restaurant
     {
         public Action<Restaurant> OnAcceptable;
-        int curCustomer=5;
+        int curCustomer=7;
         int maxCustomer=10;
 
         public bool IsAccecptable()
