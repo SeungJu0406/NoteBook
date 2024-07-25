@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main11(string[] args)
         {
             float value = 2.4f;
             Console.WriteLine(value.Round());
