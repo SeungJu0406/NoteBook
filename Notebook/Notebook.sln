@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notebook", "Notebook.csproj", "{9CA6870B-2FE4-4149-B96F-AAFE281DA475}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeleGate", "DeleGate.csproj", "{9CA6870B-2FE4-4149-B96F-AAFE281DA475}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

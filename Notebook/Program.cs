@@ -2,42 +2,44 @@
 {
     public class Program
     {
-        static void Main1(string[] args)
+        static void Main11()
         {
-            int a = 10; // 정수형에 정수를 저장하듯
-            int b = 2;
-            // 델리게이트 자료형에 함수를 저장
-            Func<float, float, float> dele1 = Plus;
-            Console.WriteLine(dele1(a,b));
-            //Action<string>
+            bool bigger = Compare(3, 2, Bigger); // compare에 Bigger 함수 넣어서 사용
+            bool less = Compare(3, 5, Less);
+            bool equal = Compare(3, 3, Equal);
+            int[] array1 = { 1, 3, 5, 7, 9 };
+            int less1 = CountIf(array1, 4, Less);
+            Console.WriteLine(less1);
         }
-        public delegate float FloatDel(float left, float right);
-        public delegate void StrDel(string str);
-        public static float Plus(float left, float right)
+        public static bool Bigger(int left, int right)
         {
-            return left + right;
+            return left > right;
         }
-        public static void Message(string text)
+        public static bool Less(int left, int right)
         {
-            Console.WriteLine(text);
+            return left < right;
         }
-        public static void GenericDel() 
+        public static bool Equal(int left, int right)
         {
-            Func<float, double/*여기까진 매개변수*/, int/*마지막이 반환형*/> func1 = Function;
-
-            Action<int, float> action1 = Action; // 반환형이 없는경우는 Action 사용
+            return left == right;
         }
-        public static int Function(float a, double b) { return 0; }
-        public static void Action(int a, float b) { }
-
-
-
-
-
-
-
-
-
+        public static bool Compare(int left, int right, Func<int, int, bool> comperer)
+        // 델리게이트를 매개변수로 전달. comperer에 따라 결과 달라짐
+        {
+            return comperer(left, right);
+        }
+        public static int CountIf(int[] array, int value, Func<int, int, bool> comparer)
+        {
+            int count = 0;
+            foreach (int item in array)
+            {
+                if (item <= value)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
     }
 }
 

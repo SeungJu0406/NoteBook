@@ -4,7 +4,7 @@ namespace Notebook
 {
     public class Program1
     {
-        public static void Main()
+        public static void Main111()
         {
             Customer customer = new Customer();
             Restaurant restaurant = new Restaurant();
@@ -41,7 +41,7 @@ namespace Notebook
         }
         public void CheckCustomerCount()
         {
-            if (curCustomer < maxCustomer)
+            if (IsAccecptable())
             {
                 OnAcceptable(this);
             }
