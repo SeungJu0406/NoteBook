@@ -2,7 +2,7 @@
 
 namespace Stack
 {
-    internal class Program
+    internal class Stack
     {
         static void Main(string[] args)
         {
