@@ -1,8 +1,8 @@
 ﻿namespace List
 {
-    internal class Program
+    internal class List
     {
-        static void Main(string[] args)
+        static void Main11(string[] args)
         { 
             List<string> list = new List<string>(10)
             {
