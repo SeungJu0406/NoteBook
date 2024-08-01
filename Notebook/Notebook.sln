@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "List", "..\List\List.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack", "..\Stack\Stack.csproj", "{96241206-730F-4AB7-91BB-3057CDB9E498}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictioononary", "..\Dictioononary\Dictioononary.csproj", "{E54646B4-A6F3-4C21-8AD9-09ACEFAFD48E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dictioononary", "..\Dictioononary\Dictioononary.csproj", "{E54646B4-A6F3-4C21-8AD9-09ACEFAFD48E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "..\Graph\Graph.csproj", "{74930A42-A67F-4BD0-BBA8-A84F3C3EC2CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{E54646B4-A6F3-4C21-8AD9-09ACEFAFD48E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E54646B4-A6F3-4C21-8AD9-09ACEFAFD48E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E54646B4-A6F3-4C21-8AD9-09ACEFAFD48E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74930A42-A67F-4BD0-BBA8-A84F3C3EC2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74930A42-A67F-4BD0-BBA8-A84F3C3EC2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74930A42-A67F-4BD0-BBA8-A84F3C3EC2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74930A42-A67F-4BD0-BBA8-A84F3C3EC2CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
