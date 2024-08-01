@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeleGate", "DeleGate.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Additional", "..\method\Additional.csproj", "{2DA2FE71-36CD-4061-82F7-C7AFE85695D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructure", "..\DataStructure\DataStructure.csproj", "{6330D1E5-DA81-4AB7-B9CC-224DB2789A80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure", "..\DataStructure\DataStructure.csproj", "{6330D1E5-DA81-4AB7-B9CC-224DB2789A80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List", "..\List\List.csproj", "{D43687D2-5411-4529-B682-8ECD9F2C70FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "List", "..\List\List.csproj", "{D43687D2-5411-4529-B682-8ECD9F2C70FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "..\Stack\Stack.csproj", "{96241206-730F-4AB7-91BB-3057CDB9E498}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack", "..\Stack\Stack.csproj", "{96241206-730F-4AB7-91BB-3057CDB9E498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictioononary", "..\Dictioononary\Dictioononary.csproj", "{E54646B4-A6F3-4C21-8AD9-09ACEFAFD48E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{96241206-730F-4AB7-91BB-3057CDB9E498}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96241206-730F-4AB7-91BB-3057CDB9E498}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96241206-730F-4AB7-91BB-3057CDB9E498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E54646B4-A6F3-4C21-8AD9-09ACEFAFD48E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E54646B4-A6F3-4C21-8AD9-09ACEFAFD48E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E54646B4-A6F3-4C21-8AD9-09ACEFAFD48E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E54646B4-A6F3-4C21-8AD9-09ACEFAFD48E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

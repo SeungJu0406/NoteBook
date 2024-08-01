@@ -8,7 +8,7 @@ namespace Stack
 {
     internal class Queue
     {
-        public static void Main()
+        public static void 11Main()
         {
             Queue<int> queue = new Queue<int>();
             queue.Enqueue(1);
