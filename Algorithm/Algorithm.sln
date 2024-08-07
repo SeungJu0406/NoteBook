@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithm", "Algorithm.csproj", "{194BB2B5-54AD-41CE-B8A3-F302278E12FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DFSBFS", "..\DFSBFS\DFSBFS.csproj", "{7DB5CAE0-7D12-494A-9F56-8DD43FF8D4AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DFSBFS", "..\DFSBFS\DFSBFS.csproj", "{7DB5CAE0-7D12-494A-9F56-8DD43FF8D4AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dijkstra", "..\Dijkstra\Dijkstra.csproj", "{3927E95E-D51D-4877-B59D-BDB9B2D9755D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7DB5CAE0-7D12-494A-9F56-8DD43FF8D4AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DB5CAE0-7D12-494A-9F56-8DD43FF8D4AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DB5CAE0-7D12-494A-9F56-8DD43FF8D4AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3927E95E-D51D-4877-B59D-BDB9B2D9755D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3927E95E-D51D-4877-B59D-BDB9B2D9755D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3927E95E-D51D-4877-B59D-BDB9B2D9755D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3927E95E-D51D-4877-B59D-BDB9B2D9755D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
