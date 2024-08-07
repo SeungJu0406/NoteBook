@@ -22,7 +22,6 @@
                 Console.WriteLine($"{i}.{visited[i],8}{distance[i],8}{parent[i],8}");
             }
         }
-
         public static void Dijkstra(/*그래프, 시작 정점, 방문?, 부모노드, */Graph graph, int start, out bool[] visited, out int[] distance, out int[] parent)
         {
             //방문, 부모노드 초기값
@@ -37,6 +36,7 @@
                 parent[i] = -1;
             }
             distance[start] = 0;
+            // 모든 노드에서 한번씩 해야함
             for (int i = 0; i < size; i++)
             {
                 int minIndex = -1;
