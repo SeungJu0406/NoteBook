@@ -8,9 +8,6 @@ namespace Algorithm
     {
         static void Main(string[] args)
         {
-<<<<<<< Updated upstream
-            
-=======
             int[,] test = { { 1, 1, 0 }, { 1, 1, 0 }, { 0, 0, 1 } };
             solution(3, test);
         }
@@ -48,7 +45,6 @@ namespace Algorithm
                 result++; // 반복전 결과값 1추가
             }
             return result;
->>>>>>> Stashed changes
         }
 
     }

@@ -19,8 +19,17 @@
             Dijkstra(graph, 0, out bool[] visited, out int[] distance, out int[] parent);
             for (int i = 0; i < graph.graph.GetLength(0); i++)
             {
-                Console.WriteLine($"{i}.{visited[i],8}{distance[i],8}{parent[i],8}");
+                Console.WriteLine($"{i}.{visited[i],8}{distance[i],8}{WhoParent(parent, i),8}");
             }
+        }
+
+        public static string WhoParent(int[] parent,int parents)
+        {
+            string temp = "";
+            if (parents == -1)
+                return temp;
+            temp = $"{parents}";
+            return WhoParent(parent, parent[parents])+ temp;
         }
         public static void Dijkstra(/*그래프, 시작 정점, 방문?, 부모노드, */Graph graph, int start, out bool[] visited, out int[] distance, out int[] parent)
         {
