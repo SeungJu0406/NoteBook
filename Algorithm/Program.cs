@@ -1,50 +1,71 @@
-﻿using System.Collections;
-using System.ComponentModel.Design;
-using System.Text;
-
-namespace Algorithm
+﻿namespace Algorithm
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int[,] test = { { 1, 1, 0 }, { 1, 1, 0 }, { 0, 0, 1 } };
-            solution(3, test);
+            Console.WriteLine(solution(10, [10, 10,1]));
         }
-        public static int solution(int n, int[,] computers)
+        public static long solution(int n, int[] works)
         {
-            //리스트로 교체     
-            List<int[]> computer = new List<int[]>();
-            int result = 0;
-            for(int i = 0; i < n; i++)
+            //1.배열 역순 정렬
+            Array.Sort(works);
+            Array.Reverse(works);
+            int nowIndex = 0;
+            int nowValue = works[0];
+            int nextIndex;
+            int nextValue;
+            //2. n값이 0이 될때까지 제거
+            while (n > 0)
             {
-                computer.Add(new int[n]);
-            }
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < n; j++)
+                //2-1.가장 앞쪽부터 다음 숫자랑 같게하고 해당 숫자의 차 만큼 n값에서 제거
+                //2-2.다음숫자가 같다면 그 다음 숫자와 비교 계속 내려감
+                //2-3.마지막 숫자까지 왔다면 더이상 내려가지 않음            
+                if (nowIndex + 1 == works.Length)
+                { // 다음 인덱스가 없는가?
+                    for (int i = 0; i <= nowIndex; i++)
+                    {
+                        works[i]--;
+                        n--;
+                        if (n == 0)
+                            break;                       
+                    }
+                }
+                else
                 {
-                    computer[i][j] = computers[i, j];
+                    nextIndex = nowIndex + 1;
+                    nextValue = works[nextIndex];
+                    if (nowValue > nextValue)
+                    {
+                        for (int i = 0; i <= nowIndex; i++)
+                        {
+                            works[i]--;
+                            nowValue--;
+                            n--;
+                            if (n == 0)
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        nowIndex = nextIndex;
+                        continue;
+                    }
                 }
             }
-            for (int i = 0; i < computer.Count; i++)
+            long[] answer = new long[works.Length];
+            for (int i = 0; i < answer.Length; i++)
             {
-                computer[i][i] = 0;
+                answer[i] = Pow(works[i]);
             }
-            //computers 리스트에 남은것이 없을때 까지 반복
-            while (computer.Count > 0)
-            {
-                for (int i = 0; i < computer.Count; i++)
-                {
-                    //첫번째와 연결된것을 제거
-                    if (computer[0][i] == 1)
-                        computer.RemoveAt(i);
-                }
-                //첫번째 본인도 제거
-                computer.RemoveAt(0);
-                result++; // 반복전 결과값 1추가
-            }
-            return result;
+            return answer.Sum();
+        }
+
+        public static long Pow(int n)
+        {
+            if (n < 0)
+                return 0;
+            return n * n;
         }
 
     }
