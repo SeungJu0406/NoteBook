@@ -4,29 +4,13 @@
     {
         static void Main(string[] args)
         {
-            PriorityQueue queue = new PriorityQueue();
-            queue.Enqueue(1);
-            queue.Enqueue(2);
-            queue.Enqueue(6);
-            queue.Enqueue(4);
-            queue.Enqueue(5);
-            for (int i = 0; i < queue.Count; i++)
-            {
-                Console.WriteLine((queue.queue[i]));
-            }
-            Console.WriteLine();
-            Console.WriteLine(queue.Peek());
-            queue.Dequeue();
-            Console.WriteLine(queue.Peek());
-            queue.Dequeue();
-            Console.WriteLine(queue.Peek());
-            queue.Dequeue();
-            Console.WriteLine(queue.Peek());
-            queue.Dequeue();
-            Console.WriteLine(queue.Peek());
-            queue.Dequeue();
-
-
+            PriorityQueue<string, int> pq = new PriorityQueue<string, int>(); //<내부 자료, 우선순위> 
+            pq.Enqueue("병아리",1);
+            pq.Enqueue("알", 0);
+            pq.Enqueue("닭",4);
+            Console.WriteLine(pq.Dequeue());
+            Console.WriteLine(pq.Dequeue());
+            Console.WriteLine(pq.Dequeue());
         }
     }
     //최대 힙 제작
